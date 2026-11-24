@@ -1,0 +1,28 @@
+body {
+  background: #f8f9fa;
+  padding-top: 64px;
+}
+
+.opcion {
+  cursor: default;
+  background: #fff;
+  min-height: 56px;
+}
+.opcion-activa {
+  cursor: pointer;
+}
+.opcion-activa:hover {
+  background: #e9ecef;
+}
+.opcion .form-check-input {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.opcion-correcta {
+  background: #d1e7dd;
+  border-color: #198754 !important;
+}
+.opcion-incorrecta {
+  background: #f8d7da;
+  border-color: #dc3545 !important;
+}
