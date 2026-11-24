@@ -1,0 +1,6 @@
+body { padding-top: 70px; background: #f8f9fa; }
+.opcion { cursor: pointer; border: 2px solid #dee2e6; background: #fff; transition: background .15s; }
+.opcion.correcta { background: #d1e7dd; border-color: #198754; }
+.opcion.incorrecta { background: #f8d7da; border-color: #dc3545; }
+.opcion.bloqueada { cursor: default; }
+.opcion input { width: 1.4rem; height: 1.4rem; flex-shrink: 0; }
