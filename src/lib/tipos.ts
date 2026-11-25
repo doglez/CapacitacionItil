@@ -8,6 +8,8 @@ export interface Pregunta {
   modulo: number;
   enunciado: string;
   opciones: Opcion[];
+  /** Página (columna Hoja del CSV) donde se encuentra la respuesta; undefined si no se indica. */
+  hoja?: string;
 }
 
 /** Filtro de módulo: "todos" o el número de módulo. */

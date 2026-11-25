@@ -6,6 +6,7 @@ interface FilaCsv {
   Pregunta: string;
   Respuestas: string;
   Correcto: string;
+  Hoja?: string;
 }
 
 export interface ResultadoCsv {
@@ -22,7 +23,7 @@ export function parsearPreguntas(texto: string): ResultadoCsv {
     skipEmptyLines: true,
   });
 
-  const grupos = new Map<string, { modulo: number; enunciado: string; opciones: Opcion[] }>();
+  const grupos = new Map<string, { modulo: number; enunciado: string; opciones: Opcion[]; hoja?: string }>();
   for (const fila of data) {
     const modulo = Number(fila.Modulo);
     if (!Number.isFinite(modulo) || !fila.Pregunta || !fila.Respuestas) continue;
@@ -32,6 +33,7 @@ export function parsearPreguntas(texto: string): ResultadoCsv {
       texto: fila.Respuestas,
       correcta: fila.Correcto?.trim().toLowerCase() === "verdadero",
     });
+    grupo.hoja ||= fila.Hoja?.trim() || undefined;
     grupos.set(clave, grupo);
   }
 

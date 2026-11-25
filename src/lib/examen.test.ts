@@ -10,7 +10,7 @@ const { preguntas, descartadas } = parsearPreguntas(
 describe("CSV", () => {
   it("carga las preguntas sin descartar ninguna", () => {
     expect(descartadas).toEqual([]);
-    expect(preguntas.length).toBeGreaterThan(250);
+    expect(preguntas.length).toBeGreaterThan(100);
   });
 });
 

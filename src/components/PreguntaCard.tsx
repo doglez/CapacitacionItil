@@ -58,6 +58,11 @@ export default function PreguntaCard({ pregunta, seleccion, onResponder, mostrar
             );
           })}
         </div>
+        {respondida && pregunta.hoja && (
+          <p className="alert alert-info py-2 px-3 mt-3 mb-0 small" role="note">
+            📖 Verifica la respuesta en la hoja <strong>{pregunta.hoja}</strong> del cuaderno.
+          </p>
+        )}
       </div>
     </div>
   );
